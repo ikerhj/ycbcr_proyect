@@ -71,6 +71,7 @@ begin -- architecture
       pixel_in_reg <= pixel_in;
 
       -- compute
+      -- YCbCr transformatioin
       pixel_tmp.y  := unsigned(signed("00"&pixel_in_reg.r)*coeff_y(0)
                       + signed("00"&pixel_in_reg.g)*coeff_y(1)
                       + signed("00"&pixel_in_reg.b)*coeff_y(2));
