@@ -1,0 +1,22 @@
+
+State Machine - |c5g_camera2hdmi_top|testimg:testimg_gen_u|wrstate_v
+Name wrstate_v.waiting wrstate_v.capturing wrstate_v.pretrigger wrstate_v.init 
+wrstate_v.init 0 0 0 0 
+wrstate_v.pretrigger 0 0 1 1 
+wrstate_v.capturing 0 1 0 1 
+wrstate_v.waiting 1 0 0 1 
+
+State Machine - |c5g_camera2hdmi_top|c5g_housekeeping:system_u|c5g_housekeeping_jtag_uart_0:jtag_uart_0|c5g_housekeeping_jtag_uart_0_scfifo_r:the_c5g_housekeeping_jtag_uart_0_scfifo_r|scfifo:rfifo|a_fffifo:subfifo|a_fefifo:fifo_state|sm_emptyfull
+Name state_middle state_full state_empty 
+state_empty 0 0 0 
+state_middle 1 0 1 
+state_full 0 1 1 
+
+State Machine - |c5g_camera2hdmi_top|c5g_housekeeping:system_u|i2c_opencores:i2c_master|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 

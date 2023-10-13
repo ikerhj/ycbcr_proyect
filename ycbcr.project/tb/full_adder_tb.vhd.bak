@@ -1,0 +1,82 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity adder_process_tb is
+end entity;
+
+architecture tb of adder_ff_process_tb is
+component full_adder is
+Port ( fa, fb, fcin : in STD_LOGIC;
+fs, fcout : out STD_LOGIC);
+end component;
+
+signal fa, fb, fcin, fs, fcinA : STD_LOGIC;
+
+begin
+
+uut : full_adder port map(
+fa =>fa, fb =>fb,
+fcin => fcin, fs => fs, fcout => fcout);
+
+stim : process 
+begin
+
+fa <= '0';
+fb <= '0';
+fcin <= '0';
+wait for 10 ns;
+assert ((fs = '0') and (fcout = '0'))
+report "test failed for input combination 000" severity error;
+
+fa <= '0';
+fb <= '0';
+fcin <= '1';
+wait for 10 ns;
+assert ((fs = '1') and (fcout = '0'))
+report "test failed for input combination 001" severity error;
+
+fa <= '0';
+fb <= '1';
+fcin <= '0';
+wait for 10 ns;
+assert ((fs = '1') and (fcout = '0'))
+report "test failed for input combination 010" severity error;
+
+fa <= '0';
+fb <= '1';
+fcin <= '1';
+wait for 10 ns;
+assert ((fs = '0') and (fcout = '1'))
+report "test failed for input combination 011" severity error;
+
+fa <= '1';
+fb <= '0';
+fcinin <= '0';
+wait for 10 ns;
+assert ((FS = '1') and (fcout = '0'))
+report "test failed for input combination 100" severity error;
+
+fa <= '1';
+fb <= '0';
+fcin <= '1';
+wait for 10 ns;
+assert ((fs = '0') and (fcout = '1'))
+report "test failed for input combination 101" severity error;
+
+fa <= '1';
+fb <= '1';
+fcin <= '0';
+wait for 10 ns;
+assert ((fs = '0') and (fcout = '1'))
+report "test failed for input combination 110" severity error;
+
+fa <= '1';
+fb <= '1';
+fcin <= '1';
+wait for 10 ns;
+assert ((FS = '1') and (fcout = '1'))
+report "test failed for input combination 111" severity error;
+wait;
+
+end process;
+end tb;
