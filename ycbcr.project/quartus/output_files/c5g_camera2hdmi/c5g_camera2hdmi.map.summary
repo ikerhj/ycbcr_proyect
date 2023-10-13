@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Sep 29 10:57:59 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : c5g_camera2hdmi
+Top-level Entity Name : c5g_camera2hdmi_top
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 2572
+Total pins : 162
+Total virtual pins : 0
+Total block memory bits : 1,924,608
+Total DSP Blocks : 7
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2
+Total DLLs : 0

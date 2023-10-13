@@ -1,0 +1,421 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'HDMI_1080P_CLK'
+Slack : -3.532
+TNS   : -71.568
+
+Type  : Slow 1100mV 85C Model Setup 'HDMI_1080P_CLK_out'
+Slack : 0.898
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 2.536
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'MIPI_CLK50_int'
+Slack : 6.024
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'SYS_CLK50'
+Slack : 10.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'MIPI_CLK50_int'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'SYS_CLK50'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'HDMI_1080P_CLK'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'HDMI_1080P_CLK_out'
+Slack : 1.758
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'HDMI_1080P_CLK'
+Slack : 2.333
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'SYS_CLK50'
+Slack : 14.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'MIPI_CLK50_int'
+Slack : 15.924
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 17.860
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'SYS_CLK50'
+Slack : 0.943
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.054
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'MIPI_CLK50_int'
+Slack : 1.256
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'HDMI_1080P_CLK'
+Slack : 1.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'HDMI_1080P_CLK'
+Slack : 1.923
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50_int'
+Slack : 8.563
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SYS_CLK50'
+Slack : 8.816
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50'
+Slack : 9.396
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50_gated'
+Slack : 9.435
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK_BASE'
+Slack : 9.731
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.756
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK20_int'
+Slack : 24.709
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'HDMI_1080P_CLK'
+Slack : -4.036
+TNS   : -80.990
+
+Type  : Slow 1100mV 0C Model Setup 'HDMI_1080P_CLK_out'
+Slack : 1.111
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 2.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'MIPI_CLK50_int'
+Slack : 6.619
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'SYS_CLK50'
+Slack : 10.267
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'MIPI_CLK50_int'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'SYS_CLK50'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'HDMI_1080P_CLK'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'HDMI_1080P_CLK_out'
+Slack : 1.499
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'HDMI_1080P_CLK'
+Slack : 2.483
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'SYS_CLK50'
+Slack : 14.963
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'MIPI_CLK50_int'
+Slack : 16.076
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 18.060
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'SYS_CLK50'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.965
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'MIPI_CLK50_int'
+Slack : 1.179
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'HDMI_1080P_CLK'
+Slack : 1.218
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'HDMI_1080P_CLK'
+Slack : 1.869
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50_int'
+Slack : 8.520
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SYS_CLK50'
+Slack : 8.773
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50'
+Slack : 9.352
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50_gated'
+Slack : 9.372
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK_BASE'
+Slack : 9.741
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK20_int'
+Slack : 24.691
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'HDMI_1080P_CLK'
+Slack : 2.004
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'HDMI_1080P_CLK_out'
+Slack : 2.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 5.347
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'MIPI_CLK50_int'
+Slack : 6.738
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'SYS_CLK50'
+Slack : 14.608
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'HDMI_1080P_CLK'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'SYS_CLK50'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'MIPI_CLK50_int'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'HDMI_1080P_CLK_out'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'HDMI_1080P_CLK'
+Slack : 4.256
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'SYS_CLK50'
+Slack : 16.608
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'MIPI_CLK50_int'
+Slack : 17.618
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 19.357
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'SYS_CLK50'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'MIPI_CLK50_int'
+Slack : 0.582
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'HDMI_1080P_CLK'
+Slack : 0.661
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'HDMI_1080P_CLK'
+Slack : 2.253
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SYS_CLK50'
+Slack : 8.474
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50_int'
+Slack : 8.876
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50_gated'
+Slack : 9.038
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK50'
+Slack : 9.039
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK_BASE'
+Slack : 9.336
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.708
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MIPI_CLK20_int'
+Slack : 24.882
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'HDMI_1080P_CLK'
+Slack : 2.335
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'HDMI_1080P_CLK_out'
+Slack : 3.013
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 5.525
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'MIPI_CLK50_int'
+Slack : 6.977
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'SYS_CLK50'
+Slack : 15.244
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.101
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'MIPI_CLK50_int'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'HDMI_1080P_CLK'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'SYS_CLK50'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'HDMI_1080P_CLK_out'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'HDMI_1080P_CLK'
+Slack : 4.537
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'SYS_CLK50'
+Slack : 17.049
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'MIPI_CLK50_int'
+Slack : 17.896
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 19.532
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'SYS_CLK50'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'MIPI_CLK50_int'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'HDMI_1080P_CLK'
+Slack : 0.601
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'HDMI_1080P_CLK'
+Slack : 2.246
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SYS_CLK50'
+Slack : 8.430
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50_int'
+Slack : 8.877
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50_gated'
+Slack : 9.011
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK50'
+Slack : 9.012
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK_BASE'
+Slack : 9.286
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.712
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MIPI_CLK20_int'
+Slack : 24.885
+TNS   : 0.000
+
+------------------------------------------------------------

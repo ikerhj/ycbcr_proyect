@@ -1,0 +1,82 @@
+../../rtl/ycbcr_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/rtl/ycbcr_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ycbcr_pack
+-- Compiling entity ycbcr_top
+-- Compiling architecture structural of ycbcr_top
+
+} {} {}} ../syslog.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/syslog.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling package syslog
+-- Compiling package body syslog
+-- Loading package syslog
+** Warning: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/syslog.vhd(266): (vcom-1236) Shared variables must be of a protected type.
+
+} {} {}} ../ycbcr_testbench.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package syslog
+-- Loading package macros
+-- Loading package ycbcr_pack
+-- Loading package ycbcr_pack4tb
+-- Compiling entity testbench
+-- Compiling architecture functional_test of testbench
+** Warning: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_testbench.vhd(35): (vcom-1236) Shared variables must be of a protected type.
+** Warning: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_testbench.vhd(36): (vcom-1236) Shared variables must be of a protected type.
+** Warning: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_testbench.vhd(37): (vcom-1236) Shared variables must be of a protected type.
+** Warning: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_testbench.vhd(38): (vcom-1236) Shared variables must be of a protected type.
+
+} {} {}} ../../lib/ycbcr_pack.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/lib/ycbcr_pack.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package ycbcr_pack
+-- Compiling package body ycbcr_pack
+-- Loading package ycbcr_pack
+
+} {} {}} ../../lib/macros.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/lib/macros.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package macros
+-- Compiling package body macros
+-- Loading package macros
+
+} {} {}} ../ycbcr_pack4tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/ycbcr_pack4tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ycbcr_pack
+-- Compiling package ycbcr_pack4tb
+-- Compiling package body ycbcr_pack4tb
+-- Loading package ycbcr_pack4tb
+
+} {} {}} ../../rtl/ycbcr_design.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/rtl/ycbcr_design.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ycbcr_pack
+-- Compiling entity ycbcr_design
+-- Compiling architecture behavioral of ycbcr_design
+
+} {} {}}

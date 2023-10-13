@@ -1,0 +1,170 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Users\Peter\Documents\Workspaces\Lehre\Spielwiese\vlsi_projekt\nios\c5g_housekeeping.qsys --block-symbol-file --output-directory=D:\Users\Peter\Documents\Workspaces\Lehre\Spielwiese\vlsi_projekt\nios\c5g_housekeeping --family="Cyclone V" --part=5CGXFC5C6F27C7
+Progress: Loading nios/c5g_housekeeping.qsys
+Progress: Reading input file
+Progress: Adding camera_pwdn_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module camera_pwdn_n
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu_sync_in [altera_avalon_pio 22.1]
+Progress: Parameterizing module cpu_sync_in
+Progress: Adding ext_int_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module ext_int_n
+Progress: Adding hw_info_in [altera_avalon_pio 22.1]
+Progress: Parameterizing module hw_info_in
+Progress: Adding i2c_device_select [altera_avalon_pio 22.1]
+Progress: Parameterizing module i2c_device_select
+Progress: Adding i2c_master [i2c_opencores 22.1]
+Progress: Parameterizing module i2c_master
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 22.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding mipi_reset_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module mipi_reset_n
+Progress: Adding n_use_rgb2ycbcr [altera_avalon_pio 22.1]
+Progress: Parameterizing module n_use_rgb2ycbcr
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding nios_custom_instr_bitswap_0 [altera_nios_custom_instr_bitswap 22.1]
+Progress: Parameterizing module nios_custom_instr_bitswap_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_lock_states [altera_avalon_pio 22.1]
+Progress: Parameterizing module pll_lock_states
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: c5g_housekeeping.cpu_sync_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.ext_int_n: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.hw_info_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: c5g_housekeeping.n_use_rgb2ycbcr: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.pll_lock_states: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Users\Peter\Documents\Workspaces\Lehre\Spielwiese\vlsi_projekt\nios\c5g_housekeeping.qsys --synthesis=VERILOG --output-directory=D:\Users\Peter\Documents\Workspaces\Lehre\Spielwiese\vlsi_projekt\nios\c5g_housekeeping\synthesis --family="Cyclone V" --part=5CGXFC5C6F27C7
+Progress: Loading nios/c5g_housekeeping.qsys
+Progress: Reading input file
+Progress: Adding camera_pwdn_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module camera_pwdn_n
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu_sync_in [altera_avalon_pio 22.1]
+Progress: Parameterizing module cpu_sync_in
+Progress: Adding ext_int_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module ext_int_n
+Progress: Adding hw_info_in [altera_avalon_pio 22.1]
+Progress: Parameterizing module hw_info_in
+Progress: Adding i2c_device_select [altera_avalon_pio 22.1]
+Progress: Parameterizing module i2c_device_select
+Progress: Adding i2c_master [i2c_opencores 22.1]
+Progress: Parameterizing module i2c_master
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 22.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding mipi_reset_n [altera_avalon_pio 22.1]
+Progress: Parameterizing module mipi_reset_n
+Progress: Adding n_use_rgb2ycbcr [altera_avalon_pio 22.1]
+Progress: Parameterizing module n_use_rgb2ycbcr
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding nios_custom_instr_bitswap_0 [altera_nios_custom_instr_bitswap 22.1]
+Progress: Parameterizing module nios_custom_instr_bitswap_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_lock_states [altera_avalon_pio 22.1]
+Progress: Parameterizing module pll_lock_states
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: c5g_housekeeping.cpu_sync_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.ext_int_n: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.hw_info_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: c5g_housekeeping.n_use_rgb2ycbcr: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping.pll_lock_states: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: c5g_housekeeping: Generating c5g_housekeeping "c5g_housekeeping" for QUARTUS_SYNTH
+Warning: c5g_housekeeping: "No matching role found for nios2_gen2_0:custom_instruction_master:E_ci_multi_clock (clk)"
+Warning: c5g_housekeeping: "No matching role found for nios2_gen2_0:custom_instruction_master:E_ci_multi_reset_req (reset_req)"
+Warning: c5g_housekeeping: "No matching role found for nios2_gen2_0:custom_instruction_master:E_ci_multi_reset (reset)"
+Info: camera_pwdn_n: Starting RTL generation for module 'c5g_housekeeping_camera_pwdn_n'
+Info: camera_pwdn_n:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=c5g_housekeeping_camera_pwdn_n --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0002_camera_pwdn_n_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0002_camera_pwdn_n_gen//c5g_housekeeping_camera_pwdn_n_component_configuration.pl  --do_build_sim=0  ]
+Info: camera_pwdn_n: Done RTL generation for module 'c5g_housekeeping_camera_pwdn_n'
+Info: camera_pwdn_n: "c5g_housekeeping" instantiated altera_avalon_pio "camera_pwdn_n"
+Info: cpu_sync_in: Starting RTL generation for module 'c5g_housekeeping_cpu_sync_in'
+Info: cpu_sync_in:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=c5g_housekeeping_cpu_sync_in --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0003_cpu_sync_in_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0003_cpu_sync_in_gen//c5g_housekeeping_cpu_sync_in_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu_sync_in: Done RTL generation for module 'c5g_housekeeping_cpu_sync_in'
+Info: cpu_sync_in: "c5g_housekeeping" instantiated altera_avalon_pio "cpu_sync_in"
+Info: hw_info_in: Starting RTL generation for module 'c5g_housekeeping_hw_info_in'
+Info: hw_info_in:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=c5g_housekeeping_hw_info_in --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0004_hw_info_in_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0004_hw_info_in_gen//c5g_housekeeping_hw_info_in_component_configuration.pl  --do_build_sim=0  ]
+Info: hw_info_in: Done RTL generation for module 'c5g_housekeeping_hw_info_in'
+Info: hw_info_in: "c5g_housekeeping" instantiated altera_avalon_pio "hw_info_in"
+Info: i2c_device_select: Starting RTL generation for module 'c5g_housekeeping_i2c_device_select'
+Info: i2c_device_select:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=c5g_housekeeping_i2c_device_select --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0005_i2c_device_select_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0005_i2c_device_select_gen//c5g_housekeeping_i2c_device_select_component_configuration.pl  --do_build_sim=0  ]
+Info: i2c_device_select: Done RTL generation for module 'c5g_housekeeping_i2c_device_select'
+Info: i2c_device_select: "c5g_housekeeping" instantiated altera_avalon_pio "i2c_device_select"
+Info: i2c_master: "c5g_housekeeping" instantiated i2c_opencores "i2c_master"
+Info: jtag_uart_0: Starting RTL generation for module 'c5g_housekeeping_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=c5g_housekeeping_jtag_uart_0 --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0007_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0007_jtag_uart_0_gen//c5g_housekeeping_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'c5g_housekeeping_jtag_uart_0'
+Info: jtag_uart_0: "c5g_housekeeping" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "c5g_housekeeping" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: nios_custom_instr_bitswap_0: "c5g_housekeeping" instantiated altera_nios_custom_instr_bitswap "nios_custom_instr_bitswap_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'c5g_housekeeping_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=c5g_housekeeping_onchip_memory2_0 --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0008_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0008_onchip_memory2_0_gen//c5g_housekeeping_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'c5g_housekeeping_onchip_memory2_0'
+Info: onchip_memory2_0: "c5g_housekeeping" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: nios2_gen2_0_custom_instruction_master_translator: "c5g_housekeeping" instantiated altera_customins_master_translator "nios2_gen2_0_custom_instruction_master_translator"
+Info: nios2_gen2_0_custom_instruction_master_comb_xconnect: "c5g_housekeeping" instantiated altera_customins_xconnect "nios2_gen2_0_custom_instruction_master_comb_xconnect"
+Info: nios2_gen2_0_custom_instruction_master_comb_slave_translator0: "c5g_housekeeping" instantiated altera_customins_slave_translator "nios2_gen2_0_custom_instruction_master_comb_slave_translator0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "c5g_housekeeping" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "c5g_housekeeping" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "c5g_housekeeping" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'c5g_housekeeping_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=c5g_housekeeping_nios2_gen2_0_cpu --dir=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0014_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/22.1std/quartus/bin64/ --verilog --config=C:/Users/Peter/AppData/Local/Temp/alt9615_2902296786044840560.dir/0014_cpu_gen//c5g_housekeeping_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.09.15 20:55:07 (*) Starting Nios II generation
+Info: cpu: # 2023.09.15 20:55:07 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.09.15 20:55:07 (*)   Creating all objects for CPU
+Info: cpu: # 2023.09.15 20:55:07 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.09.15 20:55:07 (*)   Creating plain-text RTL
+Info: cpu: # 2023.09.15 20:55:08 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'c5g_housekeeping_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file D:/Users/Peter/Documents/Workspaces/Lehre/Spielwiese/vlsi_projekt/nios/c5g_housekeeping/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Users/Peter/Documents/Workspaces/Lehre/Spielwiese/vlsi_projekt/nios/c5g_housekeeping/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/Users/Peter/Documents/Workspaces/Lehre/Spielwiese/vlsi_projekt/nios/c5g_housekeeping/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: c5g_housekeeping: Done "c5g_housekeeping" with 35 modules, 51 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

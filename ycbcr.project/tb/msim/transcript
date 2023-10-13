@@ -1,0 +1,157 @@
+# Compile of syslog.vhd was successful with warnings.
+# Compile of macros.vhd was successful.
+# Compile of ycbcr_pack.vhd was successful.
+# Compile of ycbcr_pack4tb.vhd was successful.
+# Compile of ycbcr_design.vhd was successful.
+# Compile of ycbcr_top.vhd was successful.
+# Compile of ycbcr_testbench.vhd was successful with warnings.
+# Compile of full_adder_tb.vhd failed with 27 errors.
+# 8 compiles, 1 failed with 27 errors.
+# Compile of syslog.vhd was successful with warnings.
+# Compile of macros.vhd was successful.
+# Compile of ycbcr_pack.vhd was successful.
+# Compile of ycbcr_pack4tb.vhd was successful.
+# Compile of ycbcr_design.vhd was successful.
+# Compile of ycbcr_top.vhd was successful.
+# Compile of ycbcr_testbench.vhd was successful with warnings.
+# Compile of full_adder_tb.vhd failed with 2 errors.
+# 8 compiles, 1 failed with 2 errors.
+# Compile of syslog.vhd was successful with warnings.
+# Compile of macros.vhd was successful.
+# Compile of ycbcr_pack.vhd was successful.
+# Compile of ycbcr_pack4tb.vhd was successful.
+# Compile of ycbcr_design.vhd was successful.
+# Compile of ycbcr_top.vhd was successful.
+# Compile of ycbcr_testbench.vhd was successful with warnings.
+# Compile of full_adder_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+# Load canceled
+# Load canceled
+# Load canceled
+# Compile of full_adder_tb.vhd was successful.
+vsim -gui work.full_adder_tb
+# vsim -gui work.full_adder_tb 
+# Start time: 11:12:32 on Oct 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder_tb(tb)
+# ** Warning: (vsim-3473) Component instance "uut : full_adder" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_tb File: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/full_adder_tb.vhd
+add wave -position insertpoint  \
+sim:/full_adder_tb/fa
+run
+# ** Error: test failed for input combination 000
+#    Time: 10 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 001
+#    Time: 20 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 010
+#    Time: 30 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 011
+#    Time: 40 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 100
+#    Time: 50 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 101
+#    Time: 60 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 110
+#    Time: 70 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 111
+#    Time: 80 ns  Iteration: 0  Instance: /full_adder_tb
+add wave -position insertpoint  \
+sim:/full_adder_tb/fa \
+sim:/full_adder_tb/fb \
+sim:/full_adder_tb/fcin \
+sim:/full_adder_tb/fs \
+sim:/full_adder_tb/fcout
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3473) Component instance "uut : full_adder" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_tb File: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/full_adder_tb.vhd
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: test failed for input combination 000
+#    Time: 10 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 001
+#    Time: 20 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 010
+#    Time: 30 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 011
+#    Time: 40 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 100
+#    Time: 50 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 101
+#    Time: 60 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 110
+#    Time: 70 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 111
+#    Time: 80 ns  Iteration: 0  Instance: /full_adder_tb
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3473) Component instance "uut : full_adder" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_tb File: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/full_adder_tb.vhd
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: test failed for input combination 000
+#    Time: 10 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 001
+#    Time: 20 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 010
+#    Time: 30 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 011
+#    Time: 40 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 100
+#    Time: 50 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 101
+#    Time: 60 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 110
+#    Time: 70 ns  Iteration: 0  Instance: /full_adder_tb
+# ** Error: test failed for input combination 111
+#    Time: 80 ns  Iteration: 0  Instance: /full_adder_tb
+# Compile of syslog.vhd was successful with warnings.
+# Compile of macros.vhd was successful.
+# Compile of ycbcr_pack.vhd was successful.
+# Compile of ycbcr_pack4tb.vhd was successful.
+# Compile of ycbcr_design.vhd was successful.
+# Compile of ycbcr_top.vhd was successful.
+# Compile of ycbcr_testbench.vhd was successful with warnings.
+# Compile of full_adder_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.full_adder_tb(tb)
+# ** Warning: (vsim-3473) Component instance "uut : full_adder" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_tb File: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/full_adder_tb.vhd
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of syslog.vhd was successful with warnings.
+# Compile of macros.vhd was successful.
+# Compile of ycbcr_pack.vhd was successful.
+# Compile of ycbcr_pack4tb.vhd was successful.
+# Compile of ycbcr_design.vhd was successful.
+# Compile of ycbcr_top.vhd was successful.
+# Compile of ycbcr_testbench.vhd was successful with warnings.
+# Compile of full_adder_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.full_adder_tb(tb)
+# ** Warning: (vsim-3473) Component instance "uut : full_adder" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_tb File: C:/Users/windows/Desktop/ycbcr.project/ycbcr.project/tb/full_adder_tb.vhd
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# End time: 11:29:05 on Oct 06,2023, Elapsed time: 0:16:33
+# Errors: 0, Warnings: 2

@@ -1,0 +1,154 @@
+Flow report for c5g_camera2hdmi
+Fri Sep 29 11:05:14 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Fri Sep 29 11:04:51 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; c5g_camera2hdmi                                ;
+; Top-level Entity Name           ; c5g_camera2hdmi_top                            ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CGXFC5C6F27C7                                 ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 1,738 / 29,080 ( 6 % )                         ;
+; Total registers                 ; 2743                                           ;
+; Total pins                      ; 163 / 364 ( 45 % )                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 1,924,608 / 4,567,040 ( 42 % )                 ;
+; Total DSP Blocks                ; 7 / 150 ( 5 % )                                ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                                  ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                                  ;
+; Total PLLs                      ; 2 / 12 ( 17 % )                                ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/29/2023 10:56:48 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; c5g_camera2hdmi     ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                           ;
++-------------------------------------+---------------------------------------------------------------------+--------------------------------------+---------------------+-----------------------------------+
+; Assignment Name                     ; Value                                                               ; Default Value                        ; Entity Name         ; Section Id                        ;
++-------------------------------------+---------------------------------------------------------------------+--------------------------------------+---------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 165776805556924.169601020808968                                     ; --                                   ; --                  ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                 ; --                                   ; --                  ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                 ; --                                   ; --                  ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                 ; --                                   ; --                  ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                 ; --                                   ; --                  ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; None                                                                ; --                                   ; --                  ; eda_simulation                    ;
+; EDA_TIME_SCALE                      ; 1 ps                                                                ; --                                   ; --                  ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                  ; --                                   ; --                  ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                   ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../nios/c5g_housekeeping/synthesis/../c5g_housekeeping.cmp          ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../nios/c5g_housekeeping/synthesis/../../c5g_housekeeping.qsys      ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../ip/d8m_mipi_clk_gate/synthesis/../d8m_mipi_clk_gate.cmp          ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../ip/d8m_mipi_clk_gate/synthesis/../../d8m_mipi_clk_gate.qsys      ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../ip/d8m_pll.cmp                                                   ; --                                   ; --                  ; --                                ;
+; MISC_FILE                           ; ../ip/d8m_mipi_pll.cmp                                              ; --                                   ; --                  ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                              ; --                                   ; c5g_camera2hdmi_top ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                              ; --                                   ; c5g_camera2hdmi_top ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                              ; --                                   ; c5g_camera2hdmi_top ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                 ; --                                   ; --                  ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                               ; --                                   ; --                  ; --                                ;
+; PROJECT_IP_REGENERATION_POLICY      ; ALWAYS_REGENERATE_IP                                                ; SKIP_REGENERATING_IP_IF_HDL_MODIFIED ; --                  ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files/c5g_camera2hdmi                                        ; --                                   ; --                  ; --                                ;
+; SLD_FILE                            ; ../nios/c5g_housekeeping/synthesis/c5g_housekeeping.regmap          ; --                                   ; --                  ; --                                ;
+; SLD_FILE                            ; ../nios/c5g_housekeeping/synthesis/c5g_housekeeping.debuginfo       ; --                                   ; --                  ; --                                ;
+; SLD_FILE                            ; ../ip/d8m_mipi_clk_gate/synthesis/d8m_mipi_clk_gate.debuginfo       ; --                                   ; --                  ; --                                ;
+; SLD_INFO                            ; QSYS_NAME c5g_housekeeping HAS_SOPCINFO 1 GENERATION_ID 1694804084  ; --                                   ; c5g_housekeeping    ; --                                ;
+; SLD_INFO                            ; QSYS_NAME d8m_mipi_clk_gate HAS_SOPCINFO 1 GENERATION_ID 1688645332 ; --                                   ; d8m_mipi_clk_gate   ; --                                ;
+; SMART_RECOMPILE                     ; On                                                                  ; Off                                  ; --                  ; --                                ;
+; SOPCINFO_FILE                       ; ../nios/c5g_housekeeping/synthesis/../../c5g_housekeeping.sopcinfo  ; --                                   ; --                  ; --                                ;
+; SOPCINFO_FILE                       ; ../ip/d8m_mipi_clk_gate/synthesis/../../d8m_mipi_clk_gate.sopcinfo  ; --                                   ; --                  ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                  ; --                                   ; --                  ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                  ; --                                   ; --                  ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                  ; --                                   ; --                  ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                  ; --                                   ; --                  ; --                                ;
+; TOP_LEVEL_ENTITY                    ; c5g_camera2hdmi_top                                                 ; c5g_camera2hdmi                      ; --                  ; --                                ;
++-------------------------------------+---------------------------------------------------------------------+--------------------------------------+---------------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:06     ; 1.0                     ; 13545 MB            ; 00:02:04                           ;
+; Fitter               ; 00:06:23     ; 1.1                     ; 40859 MB            ; 00:19:50                           ;
+; Assembler            ; 00:00:20     ; 1.0                     ; 13554 MB            ; 00:00:18                           ;
+; Timing Analyzer      ; 00:00:21     ; 2.2                     ; 13888 MB            ; 00:00:42                           ;
+; Total                ; 00:08:10     ; --                      ; --                  ; 00:22:54                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-NMVOJOK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-NMVOJOK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-NMVOJOK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-NMVOJOK  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off camera2hdmi -c c5g_camera2hdmi
+quartus_fit --read_settings_files=off --write_settings_files=off camera2hdmi -c c5g_camera2hdmi
+quartus_asm --read_settings_files=off --write_settings_files=off camera2hdmi -c c5g_camera2hdmi
+quartus_sta camera2hdmi -c c5g_camera2hdmi
+
+
+

@@ -1,0 +1,10 @@
+../syslog.vhd
+../../lib/macros.vhd
+../../lib/ycbcr_pack.vhd
+../ycbcr_pack4tb.vhd
+../../rtl/ycbcr_design.vhd
+../../rtl/ycbcr_top.vhd
+../ycbcr_testbench.vhd
+
+everything in one line:
+../syslog.vhd ../../lib/macros.vhd ../../lib/ycbcr_pack.vhd ../ycbcr_pack4tb.vhd ../../rtl/ycbcr_design.vhd ../../rtl/ycbcr_top.vhd ../ycbcr_testbench.vhd
