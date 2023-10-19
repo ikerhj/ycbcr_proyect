@@ -26,44 +26,44 @@ uut : half_adder port map(
 	hcout => hcout
 	);
 
- -- Stimulus process
- stim_proc: process
- begin
- -- hold reset state for 100 ns.
- wait for 100 ns;
+-- Stimulus process
+stim_proc: process
+begin
+-- hold reset state for 100 ns.
+wait for 100 ns;
 
 
 ha <= '0';
 hb <= '0';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '0';
 hb <= '0';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '0';
 hb <= '1';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '0';
 hb <= '1';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '1';
 hb <= '0';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '1';
 hb <= '0';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '1';
 hb <= '1';
-wait for 10 ns;
+wait for 100 ns;
 
 ha <= '1';
 hb <= '1';
-wait for 10 ns;
+wait for 100 ns;
 wait;
 
 end process;
