@@ -15,7 +15,7 @@ end component;
 signal ha : std_logic:='0';
 signal hb : std_logic:='0';
 signal fcin : std_logic:='0';
-signal hs, fcout : STD_LOGIC;
+signal hs, hcout : STD_LOGIC;
 
 begin
  
@@ -23,7 +23,7 @@ uut : half_adder port map(
 	ha =>ha, 
 	hb =>hb,
 	hs => hs, 
-	fcout => fcout
+	hcout => hcout
 	);
 
  -- Stimulus process
