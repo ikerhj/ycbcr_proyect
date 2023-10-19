@@ -14,8 +14,6 @@ end component;
 
 signal ha : std_logic:='0';
 signal hb : std_logic:='0';
-signal fcin : std_logic:='0';
-signal hs, hcout : std_logic:='0';
 
 begin
  
