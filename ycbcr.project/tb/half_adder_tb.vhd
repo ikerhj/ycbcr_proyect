@@ -15,7 +15,7 @@ end component;
 signal ha : std_logic:='0';
 signal hb : std_logic:='0';
 signal fcin : std_logic:='0';
-signal hs, hcout : STD_LOGIC;
+signal hs, hcout : std_logic:='0';
 
 begin
  
@@ -31,7 +31,6 @@ stim_proc: process
 begin
 -- hold reset state for 100 ns.
 wait for 100 ns;
-
 
 ha <= '0';
 hb <= '0';
