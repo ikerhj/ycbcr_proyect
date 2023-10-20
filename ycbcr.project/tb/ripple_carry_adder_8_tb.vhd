@@ -1,12 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity 8_ripple_carry_adder_tb is
-end 8_ripple_carry_adder_tb;
+entity ripple_carry_adder_8_tb is
+end ripple_carry_adder_8_tb;
 
-architecture behavior of 8_ripple_carry_adder_tb is
+architecture behavior of ripple_carry_adder_8_tb is
     -- Instantiate the 8_ripple_carry_adder component
-    component 8_ripple_carry_adder is
+    component ripple_carry_adder_8 is
     Port ( A : in STD_LOGIC_VECTOR (7 downto 0);
            B : in STD_LOGIC_VECTOR (7 downto 0);
            Cin : in STD_LOGIC;
@@ -20,7 +20,7 @@ architecture behavior of 8_ripple_carry_adder_tb is
 
 begin
     -- Instantiate the 8_ripple_carry_adder component
-    DUT: 8_ripple_carry_adder port map (A_s, B_s, Cin_s, S_s, Cout_s);
+    DUT:  port map (A_s, B_s, Cin_s, S_s, Cout_s);
 
     -- Process to provide stimulus to the 8_ripple_carry_adder component
     stim_proc: process
