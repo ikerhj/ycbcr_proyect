@@ -13,11 +13,11 @@ architecture Behavioral of ripple_carry_adder_8 is
  
 -- Full Adder VHDL Code Component Decalaration
 component full_adder
-Port ( A : in STD_LOGIC;
-B : in STD_LOGIC;
-Cin : in STD_LOGIC;
-S : out STD_LOGIC;
-Cout : out STD_LOGIC);
+Port ( fa : in STD_LOGIC;
+fb : in STD_LOGIC;
+fcin : in STD_LOGIC;
+fs : out STD_LOGIC;
+fcout : out STD_LOGIC);
 end component;
  
 -- Intermediate Carry declaration
