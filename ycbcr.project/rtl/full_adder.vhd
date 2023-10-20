@@ -7,9 +7,9 @@ entity full_adder is
   port (
     fa : in  std_logic;   -- low-active reset
     fb : in  std_logic;
-	 fcin : in std_logic;
+	fcin : in std_logic;
     fs : out std_logic;
-	 fcout	: out std_logic
+	fcout	: out std_logic
   );
 end entity full_adder;
 
