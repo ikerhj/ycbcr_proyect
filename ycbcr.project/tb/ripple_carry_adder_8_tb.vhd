@@ -20,7 +20,7 @@ architecture behavior of ripple_carry_adder_8_tb is
 
 begin
     -- Instantiate the 8_ripple_carry_adder component
-    DUT:  port map (A_s, B_s, Cin_s, S_s, Cout_s);
+    DUT: ripple_carry_adder_8 port map (A_s, B_s, Cin_s, S_s, Cout_s);
 
     -- Process to provide stimulus to the 8_ripple_carry_adder component
     stim_proc: process
