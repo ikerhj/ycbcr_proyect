@@ -16,7 +16,6 @@ end entity unsigned_multiplier_24;
 architecture Behavioral of unsigned_multiplier_24 is
     signal a_48bit : std_logic_vector(47 downto 0);
     signal b_48bit : std_logic_vector(47 downto 0);
-    signal c_temp : std_logic_vector(47 downto 0);
     signal temp, sum, shifted_a : std_logic_vector(47 downto 0);
     signal carryOut,carryIn : std_logic;
 
@@ -45,11 +44,11 @@ architecture Behavioral of unsigned_multiplier_24 is
         shifted_a <= a_48bit;
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
-                if i = 47 and carryIn /= carryOut then  -- overflow detection for the most significant bit
-                    -- Handle overflow here. For example, set the result to max value
-                    temp <= (others => '1');
-                    exit;
-                end if;
+                -- if i = 47 and carryIn /= carryOut then  -- overflow detection for the most significant bit
+                --     -- Handle overflow here. For example, set the result to max value
+                --     temp <= (others => '1');
+                --     exit;
+                -- end if;
                 temp <= sum;
                 carryIn <= carryOut;
             end if;
