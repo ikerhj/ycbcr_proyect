@@ -37,13 +37,14 @@ begin
         temp <= (others => '0');
         carryIn <= '0';
         shifted_a <= a_48bit;
-        gen: for i in 0 to 47 loop
+        for i in 0 to 47 loop
             if b_48bit(i) = '1' then
+                -- Outtside of the process, only combinational logic inside the process
                 RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
-                if carryIn /= carryOut then  -- overflow detection
-                    c <= (others => c(47)); -- set to max or min value if overflow
-                    exit;
-                end if;
+                -- if carryIn /= carryOut then  -- overflow detection
+                --     c <= (others => c(47)); -- set to max or min value if overflow
+                --     exit;
+                -- end if;
                 temp <= sum;
                 carryIn <= carryOut;
             end if;
