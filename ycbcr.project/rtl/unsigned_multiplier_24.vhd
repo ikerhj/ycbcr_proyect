@@ -29,13 +29,13 @@ architecture Behavioral of unsigned_multiplier_24 is
             Cout : out STD_LOGIC);
     end component;
 
-    -- Outtside of the process, only combinational logic inside the process
-    RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
-
-    begin
-    a_48bit <= (47 downto a'length => '0') & a;
-    b_48bit <= (47 downto b'length => '0') & b;
     
+    begin
+        a_48bit <= (47 downto a'length => '0') & a;
+        b_48bit <= (47 downto b'length => '0') & b;
+        -- Outtside of the process, only combinational logic inside the process
+        RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
+        
     
     process(a_48bit, b_48bit)
     begin
