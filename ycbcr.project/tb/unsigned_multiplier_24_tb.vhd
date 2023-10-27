@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity test_bench_unsigned_multiplier_24 is
-end entity test_bench_unsigned_multiplier_24;
+entity unsigned_multiplier_24_tb is
+end entity unsigned_multiplier_24_tb;
 
-architecture test of test_bench_unsigned_multiplier_24 is
+architecture test of unsigned_multiplier_24_tb is
     component unsigned_multiplier_24 is
         port (
             a : in std_logic_vector(23 downto 0);
