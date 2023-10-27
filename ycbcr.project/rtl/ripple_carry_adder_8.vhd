@@ -1,4 +1,4 @@
-elibrary IEEE;
+library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
  
 entity ripple_carry_adder_8 is
