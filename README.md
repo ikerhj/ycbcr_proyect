@@ -20,3 +20,4 @@
 ## Presentation
 
 -   Talk about how at the first time I tried the ripple carrie adder was instiated in every loop so i change the algorithm again
+-   Talk how the code uses alot of resources and it should be optimized

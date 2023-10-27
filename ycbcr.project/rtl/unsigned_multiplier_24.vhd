@@ -7,7 +7,7 @@ entity signed_multiplier_24 is
   port (
     a : in  std_logic_vector(23 downto 0);   -- low-active reset
     b : in  std_logic_vector(23 downto 0);
-    c : out std_logic_vector(47 downto 0);
+    c : out std_logic_vector(47 downto 0)
   );
 end entity signed_multiplier_24;
 
