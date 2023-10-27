@@ -3,20 +3,21 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ycbcr_pack.all;
 
-entity signed_multiplier_24 is
+entity unsigned_multiplier_24 is
   port (
     a : in  std_logic_vector(23 downto 0);   -- low-active reset
     b : in  std_logic_vector(23 downto 0);
     c : out std_logic_vector(47 downto 0)
   );
-end entity signed_multiplier_24;
+end entity unsigned_multiplier_24;
 
 -- Add sign logic to the multiplier
 
-architecture Behavioral of signed_multiplier_24 is
+architecture Behavioral of unsigned_multiplier_24 is
     signal a_48bit : std_logic_vector(47 downto 0);
     signal b_48bit : std_logic_vector(47 downto 0);
     signal temp, sum : std_logic_vector(47 downto 0);
+    variable shifted_a : std_logic_vector(47 downto 0);
     signal carryOut : std_logic;
 
     component ripple_carry_adder_48 is
@@ -35,10 +36,11 @@ begin
     process(a_48bit, b_48bit)
         variable carryIn : std_logic := '0';
     begin
-        temp := (others => '0');
+        temp <= (others => '0');
+        shifted_a <= a_48bit;
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
-                RCA1: ripple_carry_adder_48 port map (temp, shift_left(a_48bit, i), carryIn, sum, carryOut);
+                RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
                 if carryIn /= carryOut then  -- overflow detection
                     c <= (others => c(47)); -- set to max or min value if overflow
                     exit;
@@ -46,6 +48,7 @@ begin
                 temp <= sum;
                 carryIn <= carryOut;
             end if;
+            shifted_a <= shifted_a sll 1;
         end loop;
         c <= temp;
     end process;
