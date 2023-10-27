@@ -13,3 +13,5 @@
 -   Add sign logic to the multiplier
 -   try the most basic version with the the multiplier and the adder and then try other types of block to try to find a more optimal design
 -   Uniform the naming of variables and files
+
+-   ASK: how to convert the coefficients to csd number
