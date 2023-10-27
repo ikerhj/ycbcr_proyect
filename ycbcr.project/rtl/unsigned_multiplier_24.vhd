@@ -16,9 +16,8 @@ end entity unsigned_multiplier_24;
 architecture Behavioral of unsigned_multiplier_24 is
     signal a_48bit : std_logic_vector(47 downto 0);
     signal b_48bit : std_logic_vector(47 downto 0);
-    signal temp, sum : std_logic_vector(47 downto 0);
-    variable shifted_a : std_logic_vector(47 downto 0);
-    signal carryOut : std_logic;
+    signal temp, sum, shifted_a : std_logic_vector(47 downto 0);
+    signal carryOu,carryIn : std_logic;
 
     component ripple_carry_adder_48 is
         port (
@@ -34,10 +33,11 @@ begin
     b_48bit <= (47 downto b'length => '0') & b;
 
     process(a_48bit, b_48bit)
-        variable carryIn : std_logic := '0';
+        carryIn : std_logic := '0';
     begin
         temp <= (others => '0');
         shifted_a <= a_48bit;
+        c <= (others => '0');
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
                 RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
