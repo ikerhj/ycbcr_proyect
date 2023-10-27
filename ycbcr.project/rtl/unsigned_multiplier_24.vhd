@@ -45,8 +45,9 @@ architecture Behavioral of unsigned_multiplier_24 is
         shifted_a <= a_48bit;
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
-                if carryIn /= carryOut then  -- overflow detection
-                    c_temp <= (others => c_temp(47)); -- set to max or min value if overflow
+                if i = 47 and carryIn /= carryOut then  -- overflow detection for the most significant bit
+                    -- Handle overflow here. For example, set the result to max value
+                    temp <= (others => '1');
                     exit;
                 end if;
                 temp <= sum;
