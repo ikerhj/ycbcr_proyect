@@ -16,11 +16,11 @@ end entity unsigned_multiplier_24;
 architecture Behavioral of unsigned_multiplier_24 is
     signal a_48bit : std_logic_vector(47 downto 0) := (others => '0');
     signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
-    signal temp : std_logic_vector(47 downto 0) := (others => '0');
+    signal temp : std_logic_vector(47 downto 0);
     signal sum : std_logic_vector(47 downto 0) := (others => '0');
-    signal shifted_a : std_logic_vector(47 downto 0) := (others => '0');
+    signal shifted_a : std_logic_vector(47 downto 0);
     signal carryOut : std_logic := '0';
-    signal carryIn : std_logic := '0';
+    signal carryIn : std_logic;
 
 
 
@@ -54,7 +54,7 @@ architecture Behavioral of unsigned_multiplier_24 is
                 --     exit;
                 -- end if;
                 temp <= sum;
-                carryIn <= carryOut;
+                carryIn <= '1'';
             end if;
             shifted_a <= shifted_a(46 downto 0) & '0';
         end loop;
