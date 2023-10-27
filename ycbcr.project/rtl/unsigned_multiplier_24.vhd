@@ -54,7 +54,7 @@ architecture Behavioral of unsigned_multiplier_24 is
                 --     exit;
                 -- end if;
                 temp <= sum;
-                carryIn <= '1'';
+                carryIn <= '1';
             end if;
             shifted_a <= shifted_a(46 downto 0) & '0';
         end loop;
