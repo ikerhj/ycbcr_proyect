@@ -4,7 +4,7 @@
 
 ### Ripple Carry Adder
 
-![Alt text](docs/images/ripple_carry_adder_tb.png)
+![Alt text](docs/images/ripple_carry_adder_48_tb.png)
 
 ## Next tasks
 
@@ -21,3 +21,4 @@
 
 -   Talk about how at the first time I tried the ripple carrie adder was instiated in every loop so i change the algorithm again
 -   Talk how the code uses alot of resources and it should be optimized
+    -   Use the Booth multipler that takes into account the sing [Booth multiplier](https://github.com/gustavohb/booth-multiplier/blob/master/booth_multiplier.vhd)
