@@ -14,10 +14,15 @@ end entity unsigned_multiplier_24;
 -- Add sign logic to the multiplier
 
 architecture Behavioral of unsigned_multiplier_24 is
-    signal a_48bit : std_logic_vector(47 downto 0);
-    signal b_48bit : std_logic_vector(47 downto 0);
-    signal temp, sum, shifted_a : std_logic_vector(47 downto 0);
-    signal carryOut,carryIn : std_logic;
+    signal a_48bit : std_logic_vector(47 downto 0) := (others => '0');
+    signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
+    signal temp : std_logic_vector(47 downto 0) := (others => '0');
+    signal sum : std_logic_vector(47 downto 0) := (others => '0');
+    signal shifted_a : std_logic_vector(47 downto 0) := (others => '0');
+    signal carryOut : std_logic := '0';
+    signal carryIn : std_logic := '0';
+
+
 
     component ripple_carry_adder_48 is
         port (
