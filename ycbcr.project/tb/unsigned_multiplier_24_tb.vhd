@@ -18,7 +18,7 @@ architecture test of unsigned_multiplier_24_tb is
     signal a, b : std_logic_vector(23 downto 0);
     signal c : std_logic_vector(47 downto 0);
     signal clk : std_logic := '0';  -- add clock signal
-
+begin
     -- clock process
     clk_process : process
     begin
@@ -26,7 +26,7 @@ architecture test of unsigned_multiplier_24_tb is
         clk <= not clk;
     end process;
 
-begin
+
     uut : unsigned_multiplier_24 port map (clk => clk, a => a, b => b, c => c);  -- connect clock signal
 
     stimulus : process
