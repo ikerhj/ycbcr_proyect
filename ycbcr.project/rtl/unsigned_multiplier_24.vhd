@@ -33,8 +33,9 @@ begin
             temp <= (others => '0');
             for i in 0 to 47 loop
                 if b_48bit(i) = '1' then
-                    temp <= std_logic_vector(unsigned(temp) + shift_left(unsigned(a_48bit), i));
+                    temp <= std_logic_vector(unsigned(temp) + unsigned(a_48bit));
                 end if;
+                a_48bit <= a_48bit(46 downto 0) & '0';  -- shift right
             end loop;
             c <= temp;
         end if;
