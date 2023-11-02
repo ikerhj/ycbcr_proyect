@@ -50,7 +50,7 @@ begin
     );
 
     
-    gen_full_adders: for i in 2 to 46 generate
+    gen_full_adders: for i in 2 to 45 generate
     FA: full_adder port map (
         fa => w(i*12), 
         fb => w((i+1)*12), 
