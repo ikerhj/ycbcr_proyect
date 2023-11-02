@@ -31,11 +31,21 @@ begin
 
     -- Full adder instantiations and output assignments
     c(0) <= w(0);
-    gen_full_adders: for i in 1 to 47 generate
+    -- first iteration of the FA without cin
+    FA: full_adder port map (
+            A => w((i-1)*12), 
+            B => w(i*12), 
+            Cin =>  '0', 
+            S => sum(i), 
+            Cout => sum(i+1)
+        );
+
+    
+    gen_full_adders: for i in 2 to 47 generate
         FA: full_adder port map (
             A => w((i-1)*12), 
             B => w(i*12), 
-            Cin => (if i = 1 then '0' else w((i-2)*12+11) end if), 
+            Cin =>  w((i-2)*12+11), 
             S => sum(i), 
             Cout => sum(i+1)
         );
