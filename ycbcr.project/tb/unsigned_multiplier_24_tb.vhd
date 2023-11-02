@@ -26,33 +26,33 @@ begin
         wait for 100ns;
         a <= x"000000";
         b <= x"000000";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"000000000000" report "Test Case 1 Failed" severity error;
 
         -- repeat for other test cases...
         a <= x"000000";
         b <= x"000000";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"000000000000" report "Test Case 1 Failed" severity error;
 
         a <= x"000001";
         b <= x"000001";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"000001000001" report "Test Case 2 Failed" severity error;
 
         a <= x"0000FF";
         b <= x"0000FF";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"0000FE01FF" report "Test Case 3 Failed" severity error;
 
         a <= x"7FFFFF";
         b <= x"7FFFFF";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"3FFFFE000001" report "Test Case 4 Failed" severity error;
 
         a <= x"FFFFFF";
         b <= x"FFFFFF";
-        wait for 100ns;
+        wait for 200ns;
         assert c = x"FE0000010001" report "Test Case 5 Failed" severity error;
         wait;
     end process stimulus;
