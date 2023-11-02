@@ -29,7 +29,7 @@ begin
     end generate gen_partial_products;
 
     gen_sum: for i in 0 to 23 generate
-        gen_sum_inner: for j in 0 to 23-i generate
+        gen_sum_inner: for j in 0 to 22-i generate
             sum(i, j) <= std_logic_vector(unsigned(partial_products(i, j)) + unsigned(partial_products(i, j+1)));
         end generate gen_sum_inner;
     end generate gen_sum;
