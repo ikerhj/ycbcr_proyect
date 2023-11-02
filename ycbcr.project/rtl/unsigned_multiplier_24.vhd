@@ -11,35 +11,19 @@ entity unsigned_multiplier_24 is
 end unsigned_multiplier_24;
 
 architecture Behavioral of unsigned_multiplier_24 is
-    type array_2d is array (23 downto 0, 23 downto 0) of std_logic_vector(47 downto 0);
-    signal partial_products : array_2d;
-    signal sum : array_2d;
+    signal partial_products : std_logic_vector(47 downto 0);
+    signal sum : std_logic_vector(47 downto 0);
 begin
-    gen_partial_products: for i in 0 to 23 generate
-        gen_inner: for j in 0 to 23 generate
-            process(a, b)
-            begin
-                if b(j) = '1' then
-                    partial_products(i, j) <= std_logic_vector(shift_left(unsigned(a), j) & (23 downto 0 => '0'));
-                else
-                    partial_products(i, j) <= (others => '0');
-                end if;
-            end process;
-        end generate gen_inner;
-    end generate gen_partial_products;
+    process(a, b)
+    begin
+        sum <= (others => '0');
+        for i in 0 to 23 loop
+            if b(i) = '1' then
+                partial_products <= std_logic_vector(shift_left(unsigned(a), i) & (23 downto 0 => '0'));
+                sum <= std_logic_vector(unsigned(sum) + unsigned(partial_products));
+            end if;
+        end loop;
+    end process;
 
-    gen_sum: for i in 0 to 23 generate
-        gen_sum_inner: for j in 0 to 23-i generate
-            process(partial_products, sum)
-            begin
-                if j = 0 then
-                    sum(i, j) <= partial_products(i, j);
-                else
-                    sum(i, j) <= std_logic_vector(unsigned(sum(i, j-1)) + unsigned(partial_products(i, j)));
-                end if;
-            end process;
-        end generate gen_sum_inner;
-    end generate gen_sum;
-
-    c <= sum(23, 0);
+    c <= sum;
 end Behavioral;
