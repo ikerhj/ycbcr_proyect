@@ -18,10 +18,9 @@ architecture Behavioral of unsigned_multiplier_24 is
     signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
     signal temp : std_logic_vector(47 downto 0);
     signal sum : std_logic_vector(47 downto 0) := (others => '0');
+    signal shifted_a : std_logic_vector(47 downto 0):= (others => '0');
     signal carryOut : std_logic := '0';
     signal carryIn : std_logic;
-    variable shifted_a_var : std_logic_vector(47 downto 0);
-
 
     component ripple_carry_adder_48 is
         port (
@@ -32,16 +31,14 @@ architecture Behavioral of unsigned_multiplier_24 is
             Cout : out STD_LOGIC);
     end component;
 
-    
-    begin
-        a_48bit <= (47 downto a'length => '0') & a;
-        b_48bit <= (47 downto b'length => '0') & b;
-        -- Outtside of the process, only combinational logic inside the process
-        RCA1: ripple_carry_adder_48 port map (temp, shifted_a_var, carryIn, sum, carryOut);
-        
-    
+begin
+    a_48bit <= (47 downto a'length => '0') & a;
+    b_48bit <= (47 downto b'length => '0') & b;
+    -- Use shifted_a as an actual parameter in the component instantiation
+    RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
+
     process(a_48bit, b_48bit)
-        
+        variable shifted_a_var : std_logic_vector(47 downto 0);
     begin
         shifted_a_var := a_48bit;
         temp <= (others => '0');
@@ -52,9 +49,10 @@ architecture Behavioral of unsigned_multiplier_24 is
                 carryIn <= '1';
             end if;
             shifted_a_var := shifted_a_var(46 downto 0) & '0';
+            -- Update the signal in each iteration
+            shifted_a <= shifted_a_var;
+            wait for 0 ns; -- Force a delta cycle delay
         end loop;
         c <= temp;
     end process;
-        
 end Behavioral;
-
