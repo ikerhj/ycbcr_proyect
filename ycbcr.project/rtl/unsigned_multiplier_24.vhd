@@ -43,22 +43,19 @@ architecture Behavioral of unsigned_multiplier_24 is
     
     process(a_48bit, b_48bit)
     begin
+        variable shifted_a_var : std_logic_vector(47 downto 0) := a_48bit;
         temp <= (others => '0');
         carryIn <= '0';
-        shifted_a <= a_48bit;
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
-                -- if i = 47 and carryIn /= carryOut then  -- overflow detection for the most significant bit
-                --     -- Handle overflow here. For example, set the result to max value
-                --     temp <= (others => '1');
-                --     exit;
-                -- end if;
                 temp <= sum;
                 carryIn <= '1';
             end if;
-            shifted_a <= shifted_a(46 downto 0) & '0';
+            shifted_a_var := shifted_a_var(46 downto 0) & '0';
         end loop;
         c <= temp;
+        shifted_a <= shifted_a_var;
     end process;
+        
 end Behavioral;
 
