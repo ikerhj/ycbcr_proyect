@@ -40,6 +40,11 @@ begin
         wait for 200ns;
         assert c = x"000001000001" report "Test Case 2 Failed" severity error;
 
+        a <= x"000005";
+        b <= x"000007";
+        wait for 200ns;
+        assert c = x"000000000C" report "Test Case 3 Failed" severity error;
+        
         a <= x"0000FF";
         b <= x"0000FF";
         wait for 200ns;
