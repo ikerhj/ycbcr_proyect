@@ -1,41 +1,39 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.ycbcr_pack.all;
 
 entity unsigned_multiplier_24 is
-  port (
-    a : in  std_logic_vector(23 downto 0);   -- low-active reset
-    b : in  std_logic_vector(23 downto 0);
-    c : out std_logic_vector(47 downto 0);
-    clk : in std_logic
-  );
-end entity unsigned_multiplier_24;
-
--- Add sign logic to the multiplier
+    port (
+        a : in std_logic_vector(23 downto 0);
+        b : in std_logic_vector(23 downto 0);
+        c : out std_logic_vector(47 downto 0)
+    );
+end unsigned_multiplier_24;
 
 architecture Behavioral of unsigned_multiplier_24 is
-    signal a_48bit : std_logic_vector(47 downto 0) := (others => '0');
-    signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
-    signal temp : std_logic_vector(47 downto 0);
-    signal a_shifted : std_logic_vector(47 downto 0);  -- new signal
-
+    signal w : std_logic_vector(575 downto 0);
+    signal sum : std_logic_vector(47 downto 0);
+    component ripple_carry_adder_48 is
+        port (
+            A : in std_logic;
+            B : in std_logic;
+            Cin : in std_logic;
+            S : out std_logic;
+            Cout : out std_logic
+        );
+    end component;
 begin
-    process (clk) is
-    begin
-        if rising_edge(clk) then
-            a_48bit <= (47 downto a'length => '0') & a;
-            b_48bit <= (47 downto b'length => '0') & b;
-            temp <= (others => '0');
-            a_shifted <= a_48bit;  -- initialize a_shifted with the value of a_48bit
-            for i in 0 to 47 loop
-                if b_48bit(i) = '1' then
-                    temp <= std_logic_vector(unsigned(temp) + unsigned(a_shifted));
-                end if;
-                a_shifted <= a_shifted(46 downto 0) & '0';  -- shift right
-            end loop;
-            c <= temp;
-        end if;
-    end process;
-end Behavioral;
+    -- AND gate instantiations
+    gen_and_gates: for i in 0 to 23 generate
+        gen_and_gates_inner: for j in 0 to 23 generate
+            w(i*24+j) <= a(i) and b(j);
+        end generate;
+    end generate;
 
+    -- Full adder instantiations and output assignments
+    c(0) <= w(0);
+    gen_full_adders: for i in 1 to 47 generate
+        FA: ripple_carry_adder_48 port map (w((i-1)*12), w(i*12), w((i-2)*12+11), sum(i), sum(i+1));
+    end generate;
+
+    c <= sum;
+end Behavioral;
