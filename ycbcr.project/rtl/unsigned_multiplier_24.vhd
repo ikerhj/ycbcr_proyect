@@ -36,25 +36,34 @@ begin
             fa => w(0), 
             fb => w(12), 
             fcin =>  '0', 
-            fs => sum(1), 
-            fcout => sum(2)
+            fs => sum(0), 
+            fcout => sum(1)
         );
+
+     -- second iteration of the FA without cin
+     FAS: full_adder port map (
+        fa => w(12), 
+        fb => w(24), 
+        fcin =>  '0', 
+        fs => sum(1), 
+        fcout => sum(2)
+    );
 
     
     gen_full_adders: for i in 2 to 46 generate
-        FA: full_adder port map (
-            fa => w((i-1)*12), 
-            fb => w(i*12), 
-            fcin =>  w((i-2)*12+11), 
-            fs => sum(i), 
-            fcout => sum(i+1)
-        );
+    FA: full_adder port map (
+        fa => w(i*12), 
+        fb => w((i+1)*12), 
+        fcin =>  sum(i), 
+        fs => sum(i+1), 
+        fcout => sum(i+2)
+    );
     end generate gen_full_adders;
 
     FAL: full_adder port map (
-        fa => w((47-1)*12), 
+        fa => w((46)*12), 
         fb => w(47*12), 
-        fcin =>  w((47-2)*12+11), 
+        fcin =>  sum(46), 
         fs => sum(47), 
         fcout => open
     );
