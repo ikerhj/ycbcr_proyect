@@ -2,15 +2,15 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity unsigned_braun_multiplier_24 is
+entity unsigned_multiplier_24 is
     port (
         a : in std_logic_vector(23 downto 0);
         b : in std_logic_vector(23 downto 0);
         c : out std_logic_vector(47 downto 0)
     );
-end unsigned_braun_multiplier_24;
+end unsigned_multiplier_24;
 
-architecture Behavioral of unsigned_braun_multiplier_24 is
+architecture Behavioral of unsigned_multiplier_24 is
     type array_2d is array (23 downto 0, 23 downto 0) of std_logic_vector(47 downto 0);
     signal partial_products : array_2d;
     signal sum : array_2d;
