@@ -26,7 +26,7 @@ begin
     end generate gen_partial_products;
 
     gen_sum: for i in 0 to 47 generate
-        sum(i) <= or(partial_products(i downto i) & partial_products(i+1 downto i+1));
+        sum(i) <= partial_products(i) or partial_products(i+1);
     end generate gen_sum;
 
     c <= sum;
