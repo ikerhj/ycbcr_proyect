@@ -33,11 +33,11 @@ begin
     c(0) <= w(0);
     -- first iteration of the FA without cin
     FA: full_adder port map (
-            fa => w((0)*12), 
+            fa => w(0), 
             fb => w(12), 
             fcin =>  '0', 
-            fs => sum(0), 
-            fcout => sum(1)
+            fs => sum(1), 
+            fcout => sum(2)
         );
 
     
@@ -51,6 +51,13 @@ begin
         );
     end generate gen_full_adders;
 
+    FA: full_adder port map (
+        fa => w((47-1)*12), 
+        fb => w(47*12), 
+        fcin =>  w((47-2)*12+11), 
+        fs => sum(47), 
+        fcout => open
+    );
 
     c <= sum;
 end Behavioral;
