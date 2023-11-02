@@ -10,8 +10,8 @@ entity unsigned_multiplier_24 is
 end unsigned_multiplier_24;
 
 architecture Behavioral of unsigned_multiplier_24 is
-    signal w : std_logic_vector(575 downto 0);
-    signal sum : std_logic_vector(47 downto 0);
+    signal w : std_logic_vector(575 downto 0) := (others => '0');
+    signal sum : std_logic_vector(47 downto 0) := (others => '0');
     component full_adder is
         port (
             fa : in std_logic;
