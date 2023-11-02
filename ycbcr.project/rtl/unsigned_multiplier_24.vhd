@@ -17,10 +17,10 @@ architecture Behavioral of unsigned_multiplier_24 is
 begin
     gen_partial_products: for i in 0 to 23 generate
         gen_inner: for j in 0 to 23 generate
-            process(b)
+            process(a, b)
             begin
                 if b(j) = '1' then
-                    partial_products(i, j) <= std_logic_vector(shift_left(unsigned(a), i) & (23 downto 0 => '0'));
+                    partial_products(i, j) <= std_logic_vector(shift_left(unsigned(a), j) & (23 downto 0 => '0'));
                 else
                     partial_products(i, j) <= (others => '0');
                 end if;
@@ -29,10 +29,14 @@ begin
     end generate gen_partial_products;
 
     gen_sum: for i in 0 to 23 generate
-        gen_sum_inner: for j in 0 to 22-i generate
-            sum(i, j) <= std_logic_vector(unsigned(partial_products(i, j)) + unsigned(partial_products(i, j+1)));
+        gen_sum_inner: for j in 0 to 23-i generate
+            if j = 0 then
+                sum(i, j) <= partial_products(i, j);
+            else
+                sum(i, j) <= std_logic_vector(unsigned(sum(i, j-1)) + unsigned(partial_products(i, j)));
+            end if;
         end generate gen_sum_inner;
     end generate gen_sum;
 
-    c <= sum(0, 0);
+    c <= sum(23, 0);
 end Behavioral;
