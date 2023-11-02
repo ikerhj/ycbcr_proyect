@@ -37,7 +37,8 @@ begin
     -- Use shifted_a as an actual parameter in the component instantiation
     RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
 
-    process(a_48bit, b_48bit)
+    -- Remove the sensitivity list and use a wait statement instead
+    process
         variable shifted_a_var : std_logic_vector(47 downto 0);
     begin
         shifted_a_var := a_48bit;
@@ -54,5 +55,7 @@ begin
             wait for 0 ns; -- Force a delta cycle delay
         end loop;
         c <= temp;
+        wait on a_48bit, b_48bit; -- Wait until a_48bit or b_48bit changes
     end process;
 end Behavioral;
+
