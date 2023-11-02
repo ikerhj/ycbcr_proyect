@@ -60,6 +60,13 @@ begin
     );
     end generate gen_full_adders;
 
+    FASL: full_adder port map (
+        fa => w((45)*12), 
+        fb => w(46*12), 
+        fcin =>  sum(45), 
+        fs => sum(46), 
+        fcout => open
+    );
     FAL: full_adder port map (
         fa => w((46)*12), 
         fb => w(47*12), 
