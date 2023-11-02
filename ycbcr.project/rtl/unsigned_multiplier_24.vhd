@@ -30,11 +30,14 @@ begin
 
     gen_sum: for i in 0 to 23 generate
         gen_sum_inner: for j in 0 to 23-i generate
-            if j = 0 then
-                sum(i, j) <= partial_products(i, j);
-            else
-                sum(i, j) <= std_logic_vector(unsigned(sum(i, j-1)) + unsigned(partial_products(i, j)));
-            end if;
+            process(partial_products, sum)
+            begin
+                if j = 0 then
+                    sum(i, j) <= partial_products(i, j);
+                else
+                    sum(i, j) <= std_logic_vector(unsigned(sum(i, j-1)) + unsigned(partial_products(i, j)));
+                end if;
+            end process;
         end generate gen_sum_inner;
     end generate gen_sum;
 
