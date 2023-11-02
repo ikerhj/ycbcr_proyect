@@ -49,7 +49,7 @@ begin
                 temp <= sum;
                 carryIn <= '1';
             end if;
-            shifted_a_var := shifted_a_var(46 downto 0) & '0';
+            shifted_a_var := shifted_a_var(45 downto 0) & '0';
             -- Update the signal in each iteration
             shifted_a <= shifted_a_var;
             wait for 0 ns; -- Force a delta cycle delay
