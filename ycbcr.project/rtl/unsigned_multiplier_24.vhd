@@ -33,7 +33,7 @@ begin
         temp <= (others => '0');
         for i in 0 to 47 loop
             if b_48bit(i) = '1' then
-                temp <= temp + shifted_a_var;
+                temp <= std_logic_vector(unsigned(temp) + unsigned(shifted_a_var));
             end if;
             shifted_a_var := shifted_a_var(46 downto 0) & '0';
             wait for 0 ns; -- Force a delta cycle delay
