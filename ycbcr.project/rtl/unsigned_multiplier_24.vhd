@@ -20,7 +20,7 @@ architecture Behavioral of unsigned_multiplier_24 is
     signal sum : std_logic_vector(47 downto 0) := (others => '0');
     signal carryOut : std_logic := '0';
     signal carryIn : std_logic;
-
+    variable shifted_a_var : std_logic_vector(47 downto 0);
 
 
     component ripple_carry_adder_48 is
@@ -41,7 +41,7 @@ architecture Behavioral of unsigned_multiplier_24 is
         
     
     process(a_48bit, b_48bit)
-        variable shifted_a_var : std_logic_vector(47 downto 0);
+        
     begin
         shifted_a_var := a_48bit;
         temp <= (others => '0');
