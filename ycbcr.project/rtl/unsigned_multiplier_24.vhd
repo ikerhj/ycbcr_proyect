@@ -33,11 +33,11 @@ begin
     c(0) <= w(0);
     -- first iteration of the FA without cin
     FA: full_adder port map (
-            A => w((i-1)*12), 
-            B => w(i*12), 
+            A => w((0)*12), 
+            B => w(12), 
             Cin =>  '0', 
-            S => sum(i), 
-            Cout => sum(i+1)
+            S => sum(0), 
+            Cout => sum(1)
         );
 
     
