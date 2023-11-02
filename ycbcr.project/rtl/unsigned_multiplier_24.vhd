@@ -12,13 +12,13 @@ end unsigned_multiplier_24;
 architecture Behavioral of unsigned_multiplier_24 is
     signal w : std_logic_vector(575 downto 0);
     signal sum : std_logic_vector(47 downto 0);
-    component ripple_carry_adder_48 is
+    component full_adder is
         port (
-            A : in std_logic;
-            B : in std_logic;
-            Cin : in std_logic;
-            S : out std_logic;
-            Cout : out std_logic
+            fa : in std_logic;
+            fb : in std_logic;
+            fcin : in std_logic;
+            fs : out std_logic;
+            fcout : out std_logic
         );
     end component;
 begin
