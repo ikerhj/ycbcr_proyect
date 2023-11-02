@@ -18,24 +18,21 @@ architecture Behavioral of unsigned_multiplier_24 is
     signal a_48bit : std_logic_vector(47 downto 0) := (others => '0');
     signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
     signal temp : std_logic_vector(47 downto 0);
-
+    signal a_shifted : std_logic_vector(47 downto 0);  -- new signal
 
 begin
-   
-    -- Use shifted_a as an actual parameter in the component instantiation
-
-    -- Remove the sensitivity list and use a wait statement instead
-    process (clk) is  -- assuming 'clk' is your clock signal
+    process (clk) is
     begin
-        if rising_edge(clk) then  -- process executes on the rising edge of the clock
+        if rising_edge(clk) then
             a_48bit <= (47 downto a'length => '0') & a;
             b_48bit <= (47 downto b'length => '0') & b;
             temp <= (others => '0');
+            a_shifted <= a_48bit;  -- initialize a_shifted with the value of a_48bit
             for i in 0 to 47 loop
                 if b_48bit(i) = '1' then
-                    temp <= std_logic_vector(unsigned(temp) + unsigned(a_48bit));
+                    temp <= std_logic_vector(unsigned(temp) + unsigned(a_shifted));
                 end if;
-                a_48bit <= a_48bit(46 downto 0) & '0';  -- shift right
+                a_shifted <= a_shifted(46 downto 0) & '0';  -- shift right
             end loop;
             c <= temp;
         end if;
