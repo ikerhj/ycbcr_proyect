@@ -33,21 +33,21 @@ begin
     c(0) <= w(0);
     -- first iteration of the FA without cin
     FA: full_adder port map (
-            A => w((0)*12), 
-            B => w(12), 
-            Cin =>  '0', 
-            S => sum(0), 
-            Cout => sum(1)
+            fa => w((0)*12), 
+            fb => w(12), 
+            fcin =>  '0', 
+            fs => sum(0), 
+            fcout => sum(1)
         );
 
     
     gen_full_adders: for i in 2 to 47 generate
         FA: full_adder port map (
-            A => w((i-1)*12), 
-            B => w(i*12), 
-            Cin =>  w((i-2)*12+11), 
-            S => sum(i), 
-            Cout => sum(i+1)
+            fa => w((i-1)*12), 
+            fb => w(i*12), 
+            fcin =>  w((i-2)*12+11), 
+            fs => sum(i), 
+            fcout => sum(i+1)
         );
     end generate gen_full_adders;
 
