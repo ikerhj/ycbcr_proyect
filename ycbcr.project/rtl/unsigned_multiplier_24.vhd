@@ -18,7 +18,6 @@ architecture Behavioral of unsigned_multiplier_24 is
     signal b_48bit : std_logic_vector(47 downto 0) := (others => '0');
     signal temp : std_logic_vector(47 downto 0);
     signal sum : std_logic_vector(47 downto 0) := (others => '0');
-    signal shifted_a : std_logic_vector(47 downto 0):= (others => '0');
     signal carryOut : std_logic := '0';
     signal carryIn : std_logic;
 
@@ -38,7 +37,7 @@ architecture Behavioral of unsigned_multiplier_24 is
         a_48bit <= (47 downto a'length => '0') & a;
         b_48bit <= (47 downto b'length => '0') & b;
         -- Outtside of the process, only combinational logic inside the process
-        RCA1: ripple_carry_adder_48 port map (temp, shifted_a, carryIn, sum, carryOut);
+        RCA1: ripple_carry_adder_48 port map (temp, shifted_a_var, carryIn, sum, carryOut);
         
     
     process(a_48bit, b_48bit)
@@ -55,7 +54,6 @@ architecture Behavioral of unsigned_multiplier_24 is
             shifted_a_var := shifted_a_var(46 downto 0) & '0';
         end loop;
         c <= temp;
-        shifted_a <= shifted_a_var;
     end process;
         
 end Behavioral;
