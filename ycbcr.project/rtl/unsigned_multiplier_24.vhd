@@ -42,8 +42,9 @@ architecture Behavioral of unsigned_multiplier_24 is
         
     
     process(a_48bit, b_48bit)
+    variable shifted_a_var : std_logic_vector(47 downto 0)
     begin
-        variable shifted_a_var : std_logic_vector(47 downto 0) := a_48bit;
+        shifted_a_var := a_48bit;
         temp <= (others => '0');
         carryIn <= '0';
         for i in 0 to 47 loop
