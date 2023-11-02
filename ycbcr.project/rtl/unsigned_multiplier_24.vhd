@@ -32,7 +32,7 @@ begin
     -- Full adder instantiations and output assignments
     c(0) <= w(0);
     gen_full_adders: for i in 1 to 47 generate
-        FA: ripple_carry_adder_48 port map (w((i-1)*12), w(i*12), w((i-2)*12+11), sum(i), sum(i+1));
+        FA: full_adder port map (w((i-1)*12), w(i*12), w((i-2)*12+11), sum(i), sum(i+1));
     end generate;
 
     c <= sum;
