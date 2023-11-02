@@ -30,10 +30,17 @@ begin
     end generate;
 
     -- Full adder instantiations and output assignments
+    -- Full adder instantiations and output assignments
     c(0) <= w(0);
     gen_full_adders: for i in 1 to 47 generate
-        FA: full_adder port map (w((i-1)*12), w(i*12), w((i-2)*12+11), sum(i), sum(i+1));
-    end generate;
+        FA: if i = 1 generate
+            full_adder port map (w((i-1)*12), w(i*12), '0', sum(i), sum(i+1));
+        end generate;
+        else generate
+            full_adder port map (w((i-1)*12), w(i*12), w((i-2)*12+11), sum(i), sum(i+1));
+        end generate;
+    end generate gen_full_adders;
+
 
     c <= sum;
 end Behavioral;
