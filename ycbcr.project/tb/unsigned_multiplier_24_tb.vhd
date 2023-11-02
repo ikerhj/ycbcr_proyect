@@ -19,7 +19,7 @@ architecture test of unsigned_multiplier_24_tb is
 begin
 
 
-    uut : unsigned_multiplier_24 port map (clk => clk, a => a, b => b, c => c);  -- connect clock signal
+    uut : unsigned_multiplier_24 port map ( a => a, b => b, c => c);  -- connect clock signal
 
     stimulus : process
     begin
