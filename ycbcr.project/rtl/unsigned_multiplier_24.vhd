@@ -20,7 +20,7 @@ begin
             process(b)
             begin
                 if b(j) = '1' then
-                    partial_products(i, j) <= std_logic_vector(shift_left(unsigned(a), i));
+                    partial_products(i, j) <= std_logic_vector(shift_left(unsigned(a), i) & (23 downto 0 => '0'));
                 else
                     partial_products(i, j) <= (others => '0');
                 end if;
