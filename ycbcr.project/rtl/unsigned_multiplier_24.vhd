@@ -16,7 +16,7 @@ architecture Behavioral of unsigned_braun_multiplier_24 is
     signal sum : array_2d;
 begin
     gen_partial_products: for i in 0 to 23 generate
-        for j in 0 to 23 generate
+        gen_inner: for j in 0 to 23 generate
             process(b)
             begin
                 if b(j) = '1' then
@@ -25,13 +25,13 @@ begin
                     partial_products(i, j) <= (others => '0');
                 end if;
             end process;
-        end generate;
+        end generate gen_inner;
     end generate gen_partial_products;
 
     gen_sum: for i in 0 to 23 generate
-        for j in 0 to 23-i generate
+        gen_sum_inner: for j in 0 to 23-i generate
             sum(i, j) <= partial_products(i, j) + partial_products(i, j+1);
-        end generate;
+        end generate gen_sum_inner;
     end generate gen_sum;
 
     c <= sum(0, 0);
