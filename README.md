@@ -10,7 +10,7 @@
 
 -   ~~Test the 24 bit ripple_carry_adder~~
 -   ~~Test the 48 bit ripple_carry_adder~~
--   Add a adder to the multiplier
+-   Work on the Braun multiplier and try to fix it and find in the internet a version of it that is extensible for varaiblae inputs
 -   Add sign logic to the multiplier
 -   try the most basic version with the the multiplier and the adder and then try other types of block to try to find a more optimal design
 -   Uniform the naming of variables and files
