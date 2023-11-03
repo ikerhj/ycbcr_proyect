@@ -15,7 +15,7 @@ entity unsigned_multiplier_24 is
     port (
         a : in std_logic_vector(WIDTH-1 downto 0);
         b : in std_logic_vector(WIDTH-1 downto 0);
-        c : out std_logic_vector(2*WIDTH-1 downto 0)
+        c : out std_logic_vector(2*WIDTH downto 0)
     );
 end unsigned_multiplier_24;
 
