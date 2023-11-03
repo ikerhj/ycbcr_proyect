@@ -1,3 +1,10 @@
+-- two fors one for the row and the other for the column
+-- use a variable for the size of the column and row
+-- Also take into account that the full adders are shiftedto by -1
+
+
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -36,18 +43,19 @@ begin
             fa => w(0), 
             fb => w(12), 
             fcin =>  '0', 
-            fs => sum(0), 
-            fcout => sum(1)
+            fs => sum(1), 
+            fcout => sum(2)
         );
 
      -- second iteration of the FA without cin
      FAS: full_adder port map (
         fa => w(12), 
         fb => w(24), 
-        fcin =>  '0', 
+        fcin =>  sum(0), 
         fs => sum(1), 
         fcout => sum(2)
     );
+
 
     
     gen_full_adders: for i in 2 to 45 generate
