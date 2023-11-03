@@ -7,15 +7,18 @@ end entity unsigned_multiplier_24_tb;
 
 architecture test of unsigned_multiplier_24_tb is
     component unsigned_multiplier_24 is
+        generic (
+        WIDTH: integer := 24
+    );
         port (
-            a : in std_logic_vector(23 downto 0);
-            b : in std_logic_vector(23 downto 0);
-            c : out std_logic_vector(47 downto 0)
+            a : in std_logic_vector(WIDTH-1 downto 0);
+            b : in std_logic_vector(WIDTH-1 downto 0);
+            c : out std_logic_vector(2*WIDTH downto 0)
         );
     end component;
 
     signal a, b : std_logic_vector(23 downto 0);
-    signal c : std_logic_vector(47 downto 0);
+    signal c : std_logic_vector(48 downto 0);
 begin
 
 
